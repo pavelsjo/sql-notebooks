@@ -6,7 +6,8 @@ body {
 
 .notebook{
     background-color: white;
-    margin: 5px;
+    
+    padding: 5px;
 }
 
 .notebook-title {
@@ -21,4 +22,9 @@ body {
 
 .notebook-cell:hover {
     border-left: solid 2px #2196f5;
+}
+
+.notebook-cell-button{
+    margin: 10px;
+    border: solid 1px black;
 }
