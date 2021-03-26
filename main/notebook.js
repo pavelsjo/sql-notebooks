@@ -1,52 +1,20 @@
-// codemirror
-var myTextArea = document.querySelector('#mycode');
-var tableArea = document.querySelector('table');
+$(document).ready( () => {
 
-var editor = CodeMirror.fromTextArea(myTextArea, {
-    lineNumbers: true
-  });
+    // DOM elements
+    var myTextArea = $(".notebook textarea");
+    var editor = CodeMirror.fromTextArea(myTextArea[0], 
+        {mode: 'text/x-mysql',
+        lineNumbers: true});
 
-// interaction with web-sql
+    // DOM interaction
+    $(".notebook-cell-button").on('click', () => {
 
-function runCell () {
-    
-    db.transaction((tran) => {
-
-        tran.executeSql(editor.getValue(), [], (tran, data) => {
-
-            // create column
-            var columnNames = Object.keys(data.rows.item(0));
-            var trHeader = document.createElement('tr');
-            tableArea.appendChild(trHeader);
-
-            columnNames.forEach((col)=>{
-                var header = document.createElement('th');
-                header.textContent = col;
-                trHeader.appendChild(header);
-                });
-
-            // create rows
-            var trData = document.createElement('tr');
-            tableArea.appendChild(trData);
-
-            Array.from(data.rows).forEach((row) => {
-                // var data = document.createElement('td');
-                // data.textContent = toString(row.item);
-                // trData.appendChild(data);
-                console.log(row.value);
-                Array.from(row).forEach((col)=>{
-                    console.log(col.value);
-                });
+        db.transaction((tran) => {
+            tran.executeSql(editor.getValue(), [], (tran, data) => {
+                console.log(data);
+            }, (err)=>{
+                console.log(err);
             });
         });
     });
-
-};
-
-// var query = db.transaction((tran)=>{
-//     tran.executeSql("SELECT * FROM USERS", [], (tran,data) => {console.log(data)
-//     })
-// });
-// SELECT * FROM USERS
-
-  
+});

@@ -1,26 +1,26 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="#"> <!-- Only Development Purpose -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.60.0/codemirror.min.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.60.0/codemirror.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.60.0/mode/sql/sql.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.60.0/codemirror.css">
+  <script src="main/db.js"></script>
+  <script src="main/notebook.js"></script>
   <link rel="stylesheet" href="styles/notebook.css">
+  <link rel="shortcut icon" href="#"> <!-- Development Purpose -->
   <title>sql-lab</title>
 </head>
 <body>
-  <h1>Sql-lab</h1>
-  <div id="cell"> 
-    <textarea id="mycode"></textarea>
-    <button onclick="runCell()">Run</button>
-    <table>
-    </table>
+  <div class="notebook">
+    <h1 class="notebook-title">Sql-lab</h1>
+    <div class="notebook-cell"> 
+      <textarea class="notebook-cell-code"></textarea>
+      <button class='notebook-cell-button'>Run</button>
+    </div>
   </div>
 </body>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.60.0/codemirror.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.60.0/mode/sql/sql.min.js"></script>
-  <script src="main/notebook.js"></script>
-  <script src="main/db.js"></script>
 </html>

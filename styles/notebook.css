@@ -1,3 +1,24 @@
-#cell {
-    border: 2px solid blue;
+body {
+    margin: 0;
+    background-color: #bdbdbd;
+    font-family: 'Lucida Sans';
+}
+
+.notebook{
+    background-color: white;
+    margin: 5px;
+}
+
+.notebook-title {
+    font-weight: bold;
+    padding: 10px 10px 0px 10px;
+}
+
+.notebook-cell {
+    margin: 0px 15px 15px 15px;
+    border: 1px solid #e0e0e0;
+}
+
+.notebook-cell:hover {
+    border-left: solid 2px #2196f5;
 }
