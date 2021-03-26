@@ -52,6 +52,15 @@ $(document).ready( () => {
         divContainer.appendChild(table);
     }
 
+    function createMensajeError(errorData) {
+
+        var p = document.createElement('p');
+        p.innerHTML = errorData;
+        var divContainer = document.getElementById("notebook-show-data");
+        divContainer.innerHTML = "";
+        divContainer.appendChild(p);
+    }
+
     // DOM interaction
     $(".notebook-cell").on('keydown', (e) => {
         
@@ -66,7 +75,7 @@ $(document).ready( () => {
                         createTableFromJSON(data.rows)
                     },
                     (tx, error) => {
-                        console.log(error.message);
+                        createMensajeError(error.message);
                     }
                 );
             });
