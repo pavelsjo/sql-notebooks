@@ -66,15 +66,15 @@ $(document).ready( () => {
         
         if (e.ctrlKey && e.keyCode === 13) {
 
-            db.transaction((tx) => {
-                tx.executeSql(
+            db.transaction((tran) => {
+                tran.executeSql(
                     editor.getValue(), 
                     [],
-                    (tx, data) => {
+                    (tran, data) => {
 
                         createTableFromJSON(data.rows)
                     },
-                    (tx, error) => {
+                    (tran, error) => {
                         createMensajeError(error.message);
                     }
                 );

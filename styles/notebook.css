@@ -46,3 +46,9 @@ body {
     font-weight: bold;
     padding: 10px;
 }
+
+/* CODEMIRROR */
+
+.CodeMirror {
+    font-size:2em;
+}
