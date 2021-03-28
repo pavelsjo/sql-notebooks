@@ -10,6 +10,7 @@ const urlEmployee = "data/Employee.json";
 const urlGenre = "data/Genre.json";
 const urlInvoice = "data/Invoice.json";
 const urlInvoiceLine = "data/InvoiceLine.json";
+const urlMediaType = "data/MediaType.json";
 const urlPlaylist = "data/Playlist.json";
 const urlPlaylistTrack = "data/PlaylistTrack.json";
 const urlTrack = "data/Track.json";
@@ -92,16 +93,19 @@ function setupDataBase(query){
                     runScripts(urlScripts);
 
                     // populate table
-                    populateTable("Album", urlAlbum);
-                    populateTable("Artist", urlArtist);
-                    populateTable("Customer", urlCustomer);
-                    populateTable("Employee", urlEmployee);
-                    populateTable("Genre", urlGenre);
-                    populateTable("Invoice", urlInvoice);
-                    populateTable("InvoiceLine", urlInvoiceLine);
-                    populateTable("Playlist", urlPlaylist);
-                    populateTable("PlaylistTrack", urlPlaylistTrack);
-                    populateTable("Track", urlTrack);
+                    setTimeout(()=>{
+                        populateTable("Album", urlAlbum);
+                        populateTable("Artist", urlArtist);
+                        populateTable("Customer", urlCustomer);
+                        populateTable("Employee", urlEmployee);
+                        populateTable("Genre", urlGenre);
+                        populateTable("Invoice", urlInvoice);
+                        populateTable("InvoiceLine", urlInvoiceLine);
+                        populateTable("MediaType", urlMediaType);
+                        populateTable("Playlist", urlPlaylist);
+                        populateTable("PlaylistTrack", urlPlaylistTrack);
+                        populateTable("Track", urlTrack)
+                    }, 1000)
                 } else {
                     console.log("Star coding with CHINOOK data base!");
                 }
