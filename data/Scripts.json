@@ -13,7 +13,7 @@
             "DROP TABLE IF EXISTS [MediaType]",
             "DROP TABLE IF EXISTS [Playlist]",
             "DROP TABLE IF EXISTS [PlaylistTrack]",
-            "DROP TABLE IF EXISTS [Track]]"
+            "DROP TABLE IF EXISTS [Track]"
         ]
     },
     {
@@ -35,7 +35,7 @@
         "createTables":
         [
             "CREATE TABLE [Album] ( [AlbumId] INTEGER  NOT NULL, [Title] NVARCHAR(160)  NOT NULL, [ArtistId] INTEGER  NOT NULL, CONSTRAINT [PK_Album] PRIMARY KEY  ([AlbumId]), FOREIGN KEY ([ArtistId]) REFERENCES [Artist] ([ArtistId])  ON DELETE NO ACTION ON UPDATE NO ACTION)",
-            "CREATE TABLE [Artist] ( [ArtistId] INTEGER  NOT NULL, [Name] NVARCHAR(120), CONSTRAINT [PK_Artist] PRIMARY KEY  ([ArtistId]))",
+            "CREATE TABLE [Artist] ([ArtistId] INTEGER  NOT NULL, [Name] NVARCHAR(120), CONSTRAINT [PK_Artist] PRIMARY KEY  ([ArtistId]));",
             "CREATE TABLE [Customer] ( [CustomerId] INTEGER  NOT NULL, [FirstName] NVARCHAR(40)  NOT NULL, [LastName] NVARCHAR(20)  NOT NULL, [Company] NVARCHAR(80), [Address] NVARCHAR(70), [City] NVARCHAR(40), [State] NVARCHAR(40), [Country] NVARCHAR(40), [PostalCode] NVARCHAR(10), [Phone] NVARCHAR(24), [Fax] NVARCHAR(24), [Email] NVARCHAR(60)  NOT NULL, [SupportRepId] INTEGER, CONSTRAINT [PK_Customer] PRIMARY KEY  ([CustomerId]), FOREIGN KEY ([SupportRepId]) REFERENCES [Employee] ([EmployeeId]) ON DELETE NO ACTION ON UPDATE NO ACTION)",
             "CREATE TABLE [Employee] ( [EmployeeId] INTEGER  NOT NULL, [LastName] NVARCHAR(20)  NOT NULL, [FirstName] NVARCHAR(20)  NOT NULL, [Title] NVARCHAR(30), [ReportsTo] INTEGER, [BirthDate] DATETIME, [HireDate] DATETIME, [Address] NVARCHAR(70), [City] NVARCHAR(40), [State] NVARCHAR(40), [Country] NVARCHAR(40), [PostalCode] NVARCHAR(10), [Phone] NVARCHAR(24), [Fax] NVARCHAR(24), [Email] NVARCHAR(60), CONSTRAINT [PK_Employee] PRIMARY KEY  ([EmployeeId]), FOREIGN KEY ([ReportsTo]) REFERENCES [Employee] ([EmployeeId])  ON DELETE NO ACTION ON UPDATE NO ACTION)",
             "CREATE TABLE [Genre] ( [GenreId] INTEGER  NOT NULL, [Name] NVARCHAR(120), CONSTRAINT [PK_Genre] PRIMARY KEY  ([GenreId]) )",
