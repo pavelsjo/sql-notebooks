@@ -1,6 +1,6 @@
 # sql-notebooks
 
-Quick environment to learn SQL with NOTEBOOK STYLE using WEB SQL -- [LIVE DEMO]("https://pavelsjo.github.io/sql-notebooks/")
+Quick environment to learn SQL with NOTEBOOK STYLE using WEB SQL -- [LIVE DEMO](https://pavelsjo.github.io/sql-notebooks/)
 
 ![sql-notebooks-example](img/sql-notebooks-example.png)
 
@@ -23,7 +23,7 @@ As you can se in first image, this data base run directly in the web browser and
 
 ## Limitations
 
-Web SQL is a fetuare based in [sql lite]("https://www.sqlite.org/index.html") data base, but their use is not suported for [W3 comunity]("https://www.w3.org/TR/webdatabase/") and consecuently is not suported by all browser, so please check [suported browsers]("https://caniuse.com/sql-storage").
+Web SQL is a fetuare based in [sql lite](https://www.sqlite.org/index.html) data base, but their use is not suported for [W3 comunity](https://www.w3.org/TR/webdatabase/) and consecuently is not suported by all browser, so please check [suported browsers](https://caniuse.com/sql-storage).
 
 ## Third party code
 
