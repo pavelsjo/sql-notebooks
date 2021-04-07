@@ -26,7 +26,7 @@
 				<section class='wellcome'>
 					<blockquote>
 						<p> &ldquo;No tengo talentos especiales, pero sí soy profundamente curioso. &rdquo; </p>
-						<p> Albert Einstein </p>
+						<p> Albert Einstein</p>
 					</blockquote>
 				</section>
 
@@ -34,13 +34,15 @@
 					<h2>¿Quien soy?</h2>
 					<p><span class="fragment">Ing. Electricista...</span> <span class="fragment">Argentina...</span> <span class="fragment">Oracle...</span></p>
 					<p><span class="fragment">Datos...</span> <span class="fragment">Nube...</span> <span class="fragment">Sector Público...</span></p>
-					<p><span class="fragment">Sedapal...</span> <span class="fragment">Fonasa...</span> <span class="fragment">Ministerio de Trabajo...</span></p>
+					<p><span class="fragment">Salud...</span> <span class="fragment">Transporte...</span> <span class="fragment">Ministerios...</span></p>
 					<aside class="notes">
 						This slide has fragments which are also stepped through in the notes window.
 					</aside>
 				</section>
 
-				<section data-background-iframe="https://i.imgur.com/b7Gf7lY.mp4"></section>
+				<section>
+					<video data-autoplay src="multimedia/example-photograpy.mp4" style="width: 35%; height: auto;"></video>
+				</section>
 
 				<section>
 					<section>
@@ -93,20 +95,163 @@
 						<p>Motor de Base de Datos</p>
 						<p><span class="fragment">Oracle </span><span class="fragment">Mysql</span> <span class="fragment">Postgres</span> <span class="fragment"> y más...</span></p>
 					</section>
+					<section>
+						<h3>Tabla Inventario</h3>
+						<table>
+							<thead>
+								<tr>
+									<th style="color: #2064c0;">Identificador</th>
+									<th>Producto</th>
+									<th>Valor</th>
+									<th>Cantidad</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td style="color: #2064c0;">001</td>
+									<td>Manzanas</td>
+									<td>1</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td style="color: #2064c0;">002</td>
+									<td>Limones</td>
+									<td>2</td>
+									<td>4</td>
+								</tr>
+								<tr>
+									<td style="color: #2064c0;">003</td>
+									<td>Pan</td>
+									<td>3</td>
+									<td>2</td>
+								</tr>
+							</tbody>
+						</table>
+						<h3>Tabla Ventas</h3>
+						<table>
+							<thead>
+								<tr>
+									<th style="color: #2064c0;">Identificador</th>
+									<th>Cliente</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td style="color: #2064c0;">001</td>
+									<td>Juan</td>
+								</tr>
+								<tr>
+									<td style="color: #2064c0;">002</td>
+									<td>María</td>
+								</tr>
+								<tr>
+									<td style="color: #2064c0;">003</td>
+									<td>María</td>
+								</tr>
+							</tbody>
+						</table>
+					</section>
 					<section data-background="http://i.giphy.com/90F8aUepslB84.gif">
 					</section>
 				</section>
 
 				<section>
-					<p>¿Cuando debemos Usarla</p>
+					<section>
+						¿Se puede usar para hacer ciencia de datos?
+					</section>
+					<section>
+						La data está en un lugar seguro, para trabajar directamente con la fuentes, esquemas, tablas y sus formatos,
+						de esta forma puedes crear modelos de datos complejos para responder preguntas más complejas.
+					</section>
+					<section>
+						Puedes hacer actividades básicas y avanzadas de exploración de datos, el data cleaning, engineering feature y Machine learning.
+					</section>
+					<section>
+						Todo en la base de datos...
+					</section>
+				</section>
+
+				<section  data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
+					<h3>¿Por qué los cientificos de Datos no lo usan como lenguaje Nro1?</h3>
+				</section>
+
+				<section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
+					<section>
+						<h4>Lenguaje Declarativo VS Lenguaje Imperativo.</h4>
+					</section>
+					<section data-auto-animate>
+						<h4 data-id="code-title">Python</h4>
+						<pre data-id="code-animation"><code class="python" data-trim data-line-numbers>
+
+							<--Python es un lenguaje multiproposito-->
+
+							# declarar variables
+							lista_frutas = ['banana', 'Manzana', 'Limon']
+
+							# loops
+							for fruta in lista_frutas:
+								print(fruta)
+							
+							# mismo loop con otra sintaxis
+							for i in range(len(lista_frutas)):
+								print(lista_frutas[i])
+
+						</code></pre>
+						<p>Escribo lo que quiero y hago loops.</p>
+					</section>
+					<section data-auto-animate>
+						<h4 data-id="code-title">SQL</h4>
+						<pre data-id="code-animation"><code class="sql" data-trim data-line-numbers>
+
+							/* SQL es un lenguaje declarativo de dominio específico */
+
+							SELECT
+								*
+							FROM
+								una_tabla
+							WHERE
+								columna1 = 10 AND columna2 != 20;
+
+						</code></pre>
+						<p>Le digo a la base, lo que quiero...</p>
+					</section>
+				</section>
+
+				<section data-transition="slide" data-background="#2064c0" data-background-transition="zoom">
+					<h2>Muchos Pasos para Iniciarse</h2>
+					<ul>
+						<li>Descargar e instalar un motor de base de datos o escoger un servicio en la nube</li>
+						<li>Herramienta para conectarse a la base de datos</li>
+						<li>Driver de conexión</li>
+						<li>Datos de conexión url, port, usuario, contraseña...</li>
+						<li>Se necesita cargar datos</li>
+					</ul>
+				</section>
+
+				<section>
+					<section>
+						<h2>No es para todos los casos</h2>
+						<h4>Data Lake vs Data Warehouse</h4>
+					</section>
+					<section>
+						<blockquote>
+							<p> Si esta en SQL usa SQL...</p>
+						</blockquote>
+					</section>
+				</section>
+
+				<section>
+					<p><code>Se necesita más</code></p>
+					<h2 class="r-fit-text">DIFUSION</h2>
 				</section>
 
 				<section style="text-align: left;">
-					<h1>Fin?</h1>
+					<h1>¿Fin?</h1>
 					<p>
-						- <a href="https://slides.com">Sql Notebooks School [Codigo]</a> <br>
-						- <a href="https://slides.com">Sql Notebooks School [Demo en Vivo]</a> <br>
-						- <a href="https://github.com/hakimel/reveal.js">Comunidad SQL</a>
+						- <a href="https://github.com/pavelsjo/sql-notebooks-school">Sql Notebooks School [Codigo]</a> <br>
+						- <a href="https://pavelsjo.github.io/sql-notebooks-school/">Sql Notebooks School [Demo en Vivo]</a> <br>
+						- <a href="https://us1.list-manage.com/survey?u=86803c9bbe87430c34a01071c&id=a4538bcb24">Encuesta - Comunidad SQL</a> <br>
+						- <a href="https://www.udacity.com/course/sql-for-data-analysis--ud198">Curso - SQL for Data Analysis</a> <br>
 					</p>
 				</section>
 			</div>
