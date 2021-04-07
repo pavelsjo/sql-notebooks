@@ -93,4 +93,13 @@ div.der img{
 
 .CodeMirror {
     font-size:2em;
+    border: 1px solid #eee;
+    height: auto;
 }
+
+.CodeMirror-scroll {
+    height: auto;
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+  

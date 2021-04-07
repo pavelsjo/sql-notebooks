@@ -6,6 +6,7 @@ $(document).ready( () => {
         {
             mode: 'text/x-mysql',
             lineNumbers: true
+            
         }
     );
 
