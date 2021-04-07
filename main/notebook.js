@@ -9,6 +9,8 @@ $(document).ready( () => {
         }
     );
 
+    editor.setValue('SELECT\n    *\nFROM\n    artist\nLIMIT\n    10;')
+
     // HELP functions
     function createTableFromJSON(jsonData) {
       
