@@ -82,4 +82,12 @@ $(document).ready( () => {
         };
         
     });
+
+    $("#der-icon").on('click', () => {
+        $(".der").toggle('slow');
+    });
+
+    $("#help-icon").on('click', () => {
+        $(".help").toggle('slow');
+    });
 });

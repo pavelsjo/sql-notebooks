@@ -1,4 +1,4 @@
-# sql-notebooks
+# SQL NOTEBOOK SCHOOL
 
 Quick environment to learn SQL with NOTEBOOK STYLE using WEB SQL -- [LIVE DEMO](https://pavelsjo.github.io/sql-notebooks-school/) -- [SLIDES](https://pavelsjo.github.io/sql-notebooks-school/slides/index)
 
@@ -27,4 +27,8 @@ Web SQL is a fetuare based in [sql lite](https://www.sqlite.org/index.html) data
 
 ## Third party code
 
-To create this repo was necesary use sqcripts from [lerocha](https://github.com/lerocha/chinook-database) and json data from [marko-knoebl](https://github.com/marko-knoebl/chinook-database-json).
+To create this repo was necesary use sqcripts from [lerocha](https://github.com/lerocha/chinook-database) and json data from [marko-knoebl](https://github.com/marko-knoebl/chinook-database-json). In this way DER was extracted from [Schema - SPY](https://github.com/schemaspy/schemaspy#schema-spy----schemaspyorg).
+
+The main editor is based in [Codemirror](https://codemirror.net/).
+
+Thanks to [Tholman](https://github.com/tholman/github-corners/commits?author=tholman) for [Github Corners](https://tholman.com/github-corners/).

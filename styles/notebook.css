@@ -6,13 +6,17 @@ body {
 
 .notebook{
     background-color: white;
-    
-    padding: 5px;
+    padding: 2%;
 }
 
 .notebook-title {
-    font-weight: bold;
-    padding: 10px;
+    color: #01080e;
+    margin: 2%;
+}
+
+.notebook-sub-title {
+    color: #a3a3a3;
+    margin: 2%;
 }
 
 .notebook-cell {
@@ -45,6 +49,44 @@ body {
     text-align: left;
     font-weight: bold;
     padding: 10px;
+}
+
+.fas {
+    font-size: 75px;
+    margin: 50px  auto;
+}
+
+.fas:hover {
+    cursor: pointer;
+    color: #2196f5;
+}
+
+.fa-keyboard {
+    cursor: none;
+    font-size: 16px;
+    margin: 0 0 0 2%;
+}
+
+.fa-database {
+    margin: 1% auto 2% 43%;
+    padding: 2%;
+}
+div.der img{
+    float: left;
+    position: relative;
+    border-radius: 1%;
+    margin: 1%;
+}
+
+.help {
+    float: right;
+    position: relative;
+    background: black;
+    border-radius: 1%;
+    margin: 1%;
+    color: white;
+    width: 33%;
+    padding: 50px;
 }
 
 /* CODEMIRROR */
