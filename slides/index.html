@@ -16,13 +16,98 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
+
 				<section class="intro">
 					<i class="fas fa-database" style="color: #2064c0; font-size: 200px; margin: 0 0 5% 0; padding: 12px; background: white; border-radius:20px"></i>
 					<h3> Sql para Ciencia de Datos</h3>
 					<small> Realizado por <a href='https://www.linkedin.com/in/pavelsjo/'>Pablo Sierra</a> Solution Engineer en <a href="https://www.oracle.com/index.html">Oracle</a></small>
 				</section>
+
+				<section class='wellcome'>
+					<blockquote>
+						<p> &ldquo;No tengo talentos especiales, pero sí soy profundamente curioso. &rdquo; </p>
+						<p> Albert Einstein </p>
+					</blockquote>
+				</section>
+
 				<section class='speaker'>
-					Pablo Sierra
+					<h2>¿Quien soy?</h2>
+					<p><span class="fragment">Ing. Electricista...</span> <span class="fragment">Argentina...</span> <span class="fragment">Oracle...</span></p>
+					<p><span class="fragment">Datos...</span> <span class="fragment">Nube...</span> <span class="fragment">Sector Público...</span></p>
+					<p><span class="fragment">Sedapal...</span> <span class="fragment">Fonasa...</span> <span class="fragment">Ministerio de Trabajo...</span></p>
+					<aside class="notes">
+						This slide has fragments which are also stepped through in the notes window.
+					</aside>
+				</section>
+
+				<section data-background-iframe="https://i.imgur.com/b7Gf7lY.mp4"></section>
+
+				<section>
+					<section>
+						<h2>¿Que es el SQL?</h2>
+						<p><span class="fragment">Es un lenguaje de programación declarativo que nos permite interactuar con bases de datos relacionales.</span></p>						
+					</section>
+					<section>
+						<h3>Tabla Inventario</h3>
+						<table>
+							<thead>
+								<tr>
+									<th>Producto</th>
+									<th>Valor</th>
+									<th>Cantidad</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Manzanas</td>
+									<td>1</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td>Limones</td>
+									<td>2</td>
+									<td>4</td>
+								</tr>
+								<tr>
+									<td>Pan</td>
+									<td>3</td>
+									<td>2</td>
+								</tr>
+							</tbody>
+						</table>
+					</section>
+					<section>
+						<pre data-id="code-animation"><code class="sql" data-trim data-line-numbers="|1-4|5-6|7-8"><script type="text/template">
+							SELECT
+								Producto,
+								Valor,
+								Cantidad
+							FROM
+								tabla_inventario
+							WHERE
+								Cantidad < 5;
+						</script></code></pre>
+					</section>
+					<section>
+						<i class="fas fa-database" style="color: #2064c0; font-size: 200px; margin: 0 0 5% 0; padding: 12px; background: white; border-radius:20px"></i>
+						<p>Motor de Base de Datos</p>
+						<p><span class="fragment">Oracle </span><span class="fragment">Mysql</span> <span class="fragment">Postgres</span> <span class="fragment"> y más...</span></p>
+					</section>
+					<section data-background="http://i.giphy.com/90F8aUepslB84.gif">
+					</section>
+				</section>
+
+				<section>
+					<p>¿Cuando debemos Usarla</p>
+				</section>
+
+				<section style="text-align: left;">
+					<h1>Fin?</h1>
+					<p>
+						- <a href="https://slides.com">Sql Notebooks School [Codigo]</a> <br>
+						- <a href="https://slides.com">Sql Notebooks School [Demo en Vivo]</a> <br>
+						- <a href="https://github.com/hakimel/reveal.js">Comunidad SQL</a>
+					</p>
 				</section>
 			</div>
 		</div>
@@ -37,6 +122,7 @@
 			// - https://revealjs.com/config/
 			Reveal.initialize({
 				hash: true,
+				autoPlayMedia:true,
 
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
