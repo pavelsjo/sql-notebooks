@@ -1,6 +1,6 @@
 # sql-notebooks
 
-Quick environment to learn SQL with NOTEBOOK STYLE using WEB SQL -- [LIVE DEMO](https://pavelsjo.github.io/sql-notebooks-school/)
+Quick environment to learn SQL with NOTEBOOK STYLE using WEB SQL -- [LIVE DEMO](https://pavelsjo.github.io/sql-notebooks-school/) -- [SLIDES](https://pavelsjo.github.io/sql-notebooks-school/slides/index)
 
 ![sql-notebooks-example](img/sql-notebooks-example.png)
 
