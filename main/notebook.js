@@ -9,7 +9,6 @@ $(document).ready( () => {
             
         }
     );
-
     editor.setValue('SELECT\n    *\nFROM\n    artist\nLIMIT\n    10;')
 
     // HELP functions
@@ -85,6 +84,8 @@ $(document).ready( () => {
         };
         
     });
+
+    // Footer icons
 
     $("#der-icon").on('click', () => {
         $(".der").toggle('slow');

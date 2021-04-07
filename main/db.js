@@ -104,7 +104,7 @@ function setupDataBase(query){
                         populateTable("MediaType", urlMediaType);
                         populateTable("Playlist", urlPlaylist);
                         populateTable("PlaylistTrack", urlPlaylistTrack);
-                        populateTable("Track", urlTrack)
+                        populateTable("Track", urlTrack);
                     }, 1000)
                 } else {
                     console.log("Star coding with CHINOOK data base!");
@@ -115,6 +115,30 @@ function setupDataBase(query){
             }
         );
     });
+};
+
+function checkReRunDataBase(tableArray) {
+    
+    tableArray.forEach((table) => {
+        
+        db.transaction((tran) => {
+            tran.executeSql(
+                `SELECT COUNT(*) total FROM ${table}`, 
+                [],
+                (tran, data) => {
+                    if (data.rows[0].total === 0){
+                        setTimeout(()=>{
+                            populateTable(`${table}`,`data/${table}.json`);
+                        console.log(`Rechecked population succes: ${table}`)
+                        }, 7200);
+                    }
+                },
+                (tran, error) => {
+                    console.log(error);
+                }
+            );
+        });
+    })
 };
 
 // MAIN
@@ -128,4 +152,12 @@ WHERE
     type ='table' AND name NOT LIKE 'sqlite_%' AND name NOT LIKE '__WebKitDatabaseInfoTable__';
 `;
 
-setupDataBase(querySelectAllTables);
+//This check for tables
+setupDataBase(querySelectAllTables); 
+
+//This check for row numbers
+setTimeout(() => {
+    tables = [ 'Album', 'Artist', 'Customer', 'Employee', 'Genre', 'Invoice', 'InvoiceLine', 'MediaType', 'Playlist', 'PlaylistTrack', 'Track'];
+checkReRunDataBase(tables); 
+}, 3600);
+
